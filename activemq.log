@@ -1,0 +1,73 @@
+2015-04-01 12:57:33,577 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@25e054a6: startup date [Wed Apr 01 12:57:33 EST 2015]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | WrapperSimpleAppMain
+2015-04-01 12:57:34,593 | INFO  | PListStore:[C:\Program Files (x86)\apache-activemq-5.10.0\bin\win64\..\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | WrapperSimpleAppMain
+2015-04-01 12:57:34,609 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Program Files (x86)\apache-activemq-5.10.0\bin\win64\..\..\data\kahadb] | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2015-04-01 12:57:34,937 | INFO  | KahaDB is version 5 | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2015-04-01 12:57:34,952 | INFO  | Recovering from the journal ... | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2015-04-01 12:57:34,968 | INFO  | Recovery replayed 12 operations from the journal in 0.031 seconds. | org.apache.activemq.store.kahadb.MessageDatabase | WrapperSimpleAppMain
+2015-04-01 12:57:35,109 | INFO  | Apache ActiveMQ 5.10.0 (localhost, ID:apple-50986-1427853454984-0:1) is starting | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2015-04-01 12:57:35,124 | INFO  | Listening for connections at: tcp://apple:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2015-04-01 12:57:35,124 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2015-04-01 12:57:35,124 | INFO  | Listening for connections at: amqp://apple:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2015-04-01 12:57:35,124 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2015-04-01 12:57:35,124 | INFO  | Listening for connections at: stomp://apple:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2015-04-01 12:57:35,124 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2015-04-01 12:57:35,140 | INFO  | Listening for connections at: mqtt://apple:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | WrapperSimpleAppMain
+2015-04-01 12:57:35,140 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2015-04-01 12:57:35,218 | INFO  | Listening for connections at ws://apple:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | WrapperSimpleAppMain
+2015-04-01 12:57:35,218 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | WrapperSimpleAppMain
+2015-04-01 12:57:35,234 | INFO  | Apache ActiveMQ 5.10.0 (localhost, ID:apple-50986-1427853454984-0:1) started | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2015-04-01 12:57:35,234 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2015-04-01 12:57:35,234 | WARN  | Store limit is 102400 mb (current store usage is 0 mb). The data directory: C:\Program Files (x86)\apache-activemq-5.10.0\bin\win64\..\..\data\kahadb only has 43758 mb of usable space - resetting to maximum available disk space: 43759 mb | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2015-04-01 12:57:35,234 | ERROR | Temporary Store limit is 51200 mb, whilst the temporary data directory: C:\Program Files (x86)\apache-activemq-5.10.0\bin\win64\..\..\data\localhost\tmp_storage only has 43758 mb of usable space - resetting to maximum available 43758 mb. | org.apache.activemq.broker.BrokerService | WrapperSimpleAppMain
+2015-04-01 12:57:35,734 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | WrapperSimpleAppMain
+2015-04-01 12:57:35,796 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | WrapperSimpleAppMain
+2015-04-01 12:57:36,046 | INFO  | jolokia-agent: No access restrictor found at classpath:/jolokia-access.xml, access to all MBeans is allowed | /api | WrapperSimpleAppMain
+2015-04-01 13:00:51,524 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp1985084982-48
+2015-04-01 13:01:00,462 | WARN  | /api/message | org.eclipse.jetty.servlet.ServletHandler | qtp1985084982-51
+java.lang.IllegalStateException: STREAMED
+	at org.eclipse.jetty.server.Request.getReader(Request.java:816)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.apache.activemq.web.MessageServletSupport.getPostedMessageBody(MessageServletSupport.java:347)[activemq-web-5.10.0.jar:5.10.0]
+	at org.apache.activemq.web.MessageServlet.doPost(MessageServlet.java:126)[activemq-web-5.10.0.jar:5.10.0]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:713)[geronimo-servlet_2.5_spec-1.2.jar:1.2]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:806)[geronimo-servlet_2.5_spec-1.2.jar:1.2]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:521)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1044)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:372)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:978)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:521)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.server.Server.handle(Server.java:367)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:486)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:937)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:998)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:861)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)[jetty-all-server-7.6.9.v20130131.jar:7.6.9.v20130131]
+	at java.lang.Thread.run(Unknown Source)[:1.8.0_05]
+2015-04-01 13:01:27,168 | INFO  | Apache ActiveMQ 5.10.0 (localhost, ID:apple-50986-1427853454984-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-23
+2015-04-01 13:01:27,168 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2015-04-01 13:01:27,168 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2015-04-01 13:01:27,168 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2015-04-01 13:01:27,168 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2015-04-01 13:01:27,236 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2015-04-01 13:01:27,236 | INFO  | Connector vm://localhost stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2015-04-01 13:01:27,236 | INFO  | PListStore:[C:\Program Files (x86)\apache-activemq-5.10.0\bin\win64\..\..\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-23
+2015-04-01 13:01:27,236 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-23
+2015-04-01 13:01:27,236 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-23
+2015-04-01 13:01:27,236 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-23
+2015-04-01 13:01:27,674 | INFO  | Apache ActiveMQ 5.10.0 (localhost, ID:apple-50986-1427853454984-0:1) uptime 3 minutes | org.apache.activemq.broker.BrokerService | Thread-23
+2015-04-01 13:01:27,674 | INFO  | Apache ActiveMQ 5.10.0 (localhost, ID:apple-50986-1427853454984-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-23
+2015-04-01 13:01:27,674 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@25e054a6: startup date [Wed Apr 01 12:57:33 EST 2015]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-23
+2015-04-01 13:01:27,689 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-23
